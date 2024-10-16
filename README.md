@@ -1,5 +1,6 @@
-# JsonToXlsx
+# JSONToXLSX
 
-Usefull method for editing a xlsx instead of some locale json files.
+A useful method for editing an XLSX file instead of using local JSON files.
 
-Support convert json to xlsx and convert xlsx to json.
+Supports conversion between JSON and XLSX, both ways.
+
