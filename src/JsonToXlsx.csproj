@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net472</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>12.0</LangVersion>
+		<AssemblyName>json2xlsx</AssemblyName>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<ApplicationIcon>Favicon.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Favicon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Favicon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Favicon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Costura.Fody" Version="5.7.0" Condition="'$(Configuration)' == 'Release'">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>compile; runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="MiniExcel" Version="1.34.2" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Microsoft.CSharp" />
+	</ItemGroup>
+
+</Project>
