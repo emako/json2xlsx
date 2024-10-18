@@ -2,6 +2,10 @@
 using MiniExcelLibs.OpenXml;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace JsonToXlsx;
 
@@ -11,7 +15,12 @@ internal class Program
     {
         var filePaths = args.ToList();
 
-        if (filePaths.All(f => Path.GetExtension(f).ToLower() == ".json"))
+        if (filePaths.Count < 1)
+        {
+            Console.WriteLine("Please provide the file path(s) as arguments.");
+            return;
+        }
+        else if (filePaths.All(f => Path.GetExtension(f).ToLower() == ".json"))
         {
             // Used to store each file's key-value pairs
             var data = new Dictionary<string, List<object>>();
