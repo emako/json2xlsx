@@ -18,6 +18,7 @@ internal class Program
         if (filePaths.Count < 1)
         {
             Console.WriteLine("Please provide the file path(s) as arguments.");
+            Environment.ExitCode = 1;
             return;
         }
         else if (filePaths.All(f => Path.GetExtension(f).ToLower() == ".json"))
@@ -91,8 +92,9 @@ internal class Program
             }
 
             // Export to Excel file
+            FileInfo fileInfo = new(filePaths[0]);
             string excelFilePath = "output.xlsx";
-            MiniExcel.SaveAs(excelFilePath, rows, printHeader: true, configuration: new OpenXmlConfiguration() { AutoFilter = false }, overwriteFile: true);
+            MiniExcel.SaveAs(Path.Combine(fileInfo.DirectoryName!, excelFilePath), rows, printHeader: true, configuration: new OpenXmlConfiguration() { AutoFilter = false }, overwriteFile: true);
 
             Console.WriteLine("Excel file generated successfully!");
         }
@@ -134,7 +136,7 @@ internal class Program
                     for (int j = 1; j < line.Count(); j++)
                     {
                         // Combine the directory name with the header value to create the JSON file path
-                        columns.Add((Path.Combine(fileInfo.DirectoryName, $"{line[j]}.json"), []));
+                        columns.Add((Path.Combine(fileInfo.DirectoryName!, $"{line[j]}.json"), []));
                     }
 
                     // Skip further processing for the header row
@@ -206,7 +208,7 @@ file static class JsonBeautifier
     public static string SortJson(string json)
     {
         SortedDictionary<string, object>? dic = JsonConvert.DeserializeObject<SortedDictionary<string, object>>(json);
-        SortedDictionary<string, object> keyValues = new(dic);
+        SortedDictionary<string, object> keyValues = new(dic!);
         keyValues.OrderBy(m => m.Key);
 
         SortedDictionary<string, object> tempKeyValues = new(keyValues);
