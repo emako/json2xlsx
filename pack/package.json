@@ -1,0 +1,18 @@
+{
+  "name": "json2xlsx.cli",
+  "version": "1.0.0",
+  "description": "A useful program for editing an XLSX file instead of using local JSON files.",
+  "main": "",
+  "files": [
+    "bin/",
+    "test/"
+  ],
+  "keywords": [
+    "vue-i18n"
+  ],
+  "author": "emako",
+  "bugs": {
+    "url": "https://github.com/emako/json2xlsx/issues"
+  },
+  "homepage": "https://github.com/emako/json2xlsx"
+}
