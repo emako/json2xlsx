@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/json2xlsx.cli.svg)](https://www.npmjs.com/package/json2xlsx.cli) [![Platform](https://img.shields.io/badge/platform-Windows-blue?logo=windowsxp&color=1E9BFA)](https://dotnet.microsoft.com/zh-cn/download/dotnet/latest/runtime) [![Platform](https://img.shields.io/badge/platform-Linux-green?logo=linux&color=1E9BFA)](https://dotnet.microsoft.com/zh-cn/download/dotnet/latest/runtime) [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple&color=1E9BFA)](https://dotnet.microsoft.com/zh-cn/download/dotnet/latest/runtime)
+
 # JSONToXLSX
 
 A useful program for editing an XLSX file instead of using local JSON files.
