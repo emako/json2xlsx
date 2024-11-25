@@ -2,7 +2,7 @@
 
 # JSONToXLSX
 
-A useful program for editing an XLSX file instead of using local JSON files.
+Editing vue-i18n locale files in XLSX, a  useful program for editing an XLSX file instead of using local JSON files.
 
 Supports conversion between JSON and XLSX, both ways.
 
@@ -13,7 +13,7 @@ This program is for use with vue-i18n.
 | Target Runtime | Dependencies                                                 |
 | -------------- | ------------------------------------------------------------ |
 | win7-x86       | [.NET Framework 4.7.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472) |
-| others         | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) |
+| others         | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) |
 
 ## Usage
 

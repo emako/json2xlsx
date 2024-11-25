@@ -1,14 +1,16 @@
 {
   "name": "json2xlsx.cli",
-  "version": "1.0.0",
-  "description": "A useful program for editing an XLSX file instead of using local JSON files.",
+  "version": "1.0.1",
+  "description": "Editing vue-i18n locale files in XLSX, a useful program for editing an XLSX file instead of using local JSON files.",
   "main": "",
   "files": [
     "bin/",
     "test/"
   ],
   "keywords": [
-    "vue-i18n"
+    "vue-i18n",
+    "i18n",
+    "xlsx"
   ],
   "author": "emako",
   "bugs": {
